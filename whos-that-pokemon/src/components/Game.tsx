@@ -1,5 +1,6 @@
 import React from 'react'
 import type { PokemonType } from '../types/Pokemon.types'
+import AnswerInput from './AnswerInput'
 
 interface GameProps {
   pkm: PokemonType;
@@ -12,10 +13,14 @@ const Game:React.FC<GameProps> = ({ pkm, crrtPkm, setCrrtPkm }) => {
     return (
       <>
         <div className='flex flex-col items-center justify-center h-screen bg-red-500 font-bold text-black'>
-          <h1>Who's that Pokemon!</h1>
+          <h1 className='text-4xl'>Who's that Pokemon!</h1>
           <div className='flex flex-col items-center justify-center'>
-            <img src={pkm.sprites.front} alt={pkm.name} className='w-400% h-400% grayscale brightness-0' />
-            
+            <img src={pkm.sprites.front} className='w-md h-auto max-w-lg grayscale brightness-0' />
+            <AnswerInput name={pkm.name} />
+            <button 
+              className='bg-white text-red-500 font-bold px-4 py-2 rounded cursor-pointer mt-4'
+              onClick={() => setCrrtPkm(Math.floor(Math.random() * 151) + 1)}
+            >Try Again!</button>
           </div>
         </div>
       </>
