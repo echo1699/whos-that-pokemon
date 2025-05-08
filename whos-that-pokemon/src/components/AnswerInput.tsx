@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface AnswerInputProps {
   name: string;
+  setIsCorrect: (value: boolean) => void;
 }
 
 function lowerCase(str: string) {
   return str.toLowerCase()
 }
 
-const AnswerInput:React.FC<AnswerInputProps> = ({name}) => {
-  const [inputValue, setInputValue] = React.useState<string>('')
+const AnswerInput:React.FC<AnswerInputProps> = ({name, setIsCorrect}) => {
+  const [inputValue, setInputValue] = useState<string>('')
+  
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
@@ -20,8 +22,10 @@ const AnswerInput:React.FC<AnswerInputProps> = ({name}) => {
 
     if (lowerCaseAnswer === name){
       console.log(`Correct! The Pokémon is ${name}`)
+      setIsCorrect(true)
     } else {
       console.log(`Incorrect! Try again.`)
+      setIsCorrect(false)
     }
   }
 
@@ -34,7 +38,7 @@ const AnswerInput:React.FC<AnswerInputProps> = ({name}) => {
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button className="mt-2 p-2 bg-blue-500 text-white rounded-md"
+      <button className="mt-2 p-2 bg-blue-500 text-white rounded-md cursor-pointer"
         onClick={handleSubmit}>
         Submit
       </button>
