@@ -38,7 +38,7 @@ const AnswerInput:React.FC<AnswerInputProps> = ({name, setIsCorrect}) => {
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button className="mt-2 p-2 bg-blue-500 text-white rounded-md cursor-pointer"
+      <button className="mt-4 p-2 bg-blue-500 text-white rounded-md cursor-pointer"
         onClick={handleSubmit}>
         Submit
       </button>
