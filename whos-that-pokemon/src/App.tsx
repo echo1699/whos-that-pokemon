@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home setCurrentPokemon={setCurrentPokemon}/>} />
           <Route path='/game' element={
-            <div className='flex flex-col items-center justify-center h-screen w-md backdrop-blur-sm p-4 shadow-xl'>
+            <div className='flex flex-col items-center justify-center w-screen h-screen backdrop-blur-sm p-4'>
               {pokemon.length > 0 ? 
                 <Game pkm={pokemon[currentPokemon]} setCrrtPkm={setCurrentPokemon} />
               :
