@@ -41,6 +41,29 @@ A fun and interactive web app that challenges users to identify Pokémon based o
 
 ---
 
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/echo1699/whos-that-pokemon
+cd whos-that-pokemon
+```
+### 2. Install Dependencies
+
+```bash
+cd whos-that-pokemon
+npm install
+```
+
+### 3. Start the App
+
+```bash
+npm run dev
+```
+
+---
+
 ## 📸 Demo
 ![Who's That Pokémon Demo](https://i.imgur.com/XJqpPXl.png)
 ![Who's That Pokémon Demo](https://i.imgur.com/eBPyr8S.png)
