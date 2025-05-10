@@ -45,3 +45,8 @@ A fun and interactive web app that challenges users to identify Pokémon based o
 ![Who's That Pokémon Demo](https://i.imgur.com/XJqpPXl.png)
 ![Who's That Pokémon Demo](https://i.imgur.com/eBPyr8S.png)
 ![Who's That Pokémon Demo](https://i.imgur.com/fBwDySz.png)
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.
