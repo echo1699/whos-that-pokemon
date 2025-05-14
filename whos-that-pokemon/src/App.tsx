@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Game from './components/Game'
 import Loader from './components/Loader'
 import './App.css'
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import type { PokemonType } from './types/Pokemon.types'
 
 function App() {

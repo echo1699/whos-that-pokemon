@@ -1,4 +1,4 @@
-import { TypesType } from './Types.types'
+import type { TypesType } from './Types.types';
 
 export type AbilitiesType = {
   abilities: TypesType;
